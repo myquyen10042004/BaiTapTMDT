@@ -1,0 +1,47 @@
+@startuml
+title Sơ đồ Use Case tổng quát – Hệ thống E-Kids Fashion (B2C)
+left to right direction
+skinparam actorStyle awesome
+skinparam usecase {
+  BackgroundColor #FFF9E6
+  BorderColor #FF9900
+  ArrowColor #FF6600
+}
+
+actor "Khách hàng" as G
+actor "Quản trị viên" as A
+actor "Hệ thống thông báo" as NS
+actor "Đơn vị giao hàng" as DU
+
+rectangle "Hệ thống E-Kids Fashion (B2C)" {
+  usecase "UC01: Duyệt danh mục / Tìm kiếm sản phẩm" as UC01
+  usecase "UC02: Xem chi tiết sản phẩm" as UC02
+  usecase "UC03: Thêm vào giỏ / Cập nhật giỏ hàng" as UC03
+  usecase "UC04: Đặt hàng (COD)" as UC04
+  usecase "UC05: Theo dõi trạng thái đơn hàng" as UC05
+  usecase "UC06: Quản lý sản phẩm" as UC06
+  usecase "UC07: Xem và quản lý đơn hàng" as UC07
+  usecase "UC08: Gửi thông báo đơn hàng" as UC08
+  usecase "UC09: Xác nhận giao hàng" as UC09
+}
+
+'--- Khách hàng (Guest) ---
+G --> UC01 : "Xem danh mục"
+G --> UC02 : "Xem chi tiết"
+G --> UC03 : "Thêm giỏ hàng"
+G --> UC04 : "Đặt hàng COD"
+G --> UC05 : "Theo dõi đơn hàng"
+
+'--- Quản trị viên (Admin) ---
+A --> UC06 : "Quản lý sản phẩm"
+A --> UC07 : "Theo dõi & xử lý đơn"
+
+'--- Các hệ thống phụ trợ ---
+NS --> UC08 : "Gửi thông báo"
+DU --> UC09 : "Cập nhật giao hàng"
+
+'--- Mối quan hệ giữa các Use Case ---
+UC04 --> UC08 : <<include>> 
+UC07 --> UC09 : <<extend>>
+
+@enduml

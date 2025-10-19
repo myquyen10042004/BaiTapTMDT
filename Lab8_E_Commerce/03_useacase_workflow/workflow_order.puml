@@ -1,0 +1,38 @@
+@startuml
+|Khách hàng|
+start
+:Truy cập website;
+:Chọn danh mục & tìm sản phẩm;
+:Thêm vào giỏ hàng;
+:Chọn thanh toán COD và xác nhận đơn;
+
+|Hệ thống|
+:Kiểm tra dữ liệu đơn hàng;
+:Khởi tạo mã đơn & lưu vào CSDL;
+:Gửi thông báo "Đã tiếp nhận" cho khách hàng;
+
+|Quản trị viên|
+:Nhận thông tin đơn hàng mới;
+:Kiểm tra kho và xác nhận giao hàng;
+:Cập nhật trạng thái "Đang giao";
+:Chuyển thông tin cho đơn vị giao hàng;
+
+|Đơn vị giao hàng|
+:Nhận đơn cần giao;
+:Tiến hành giao hàng;
+if (Giao thành công?) then (Yes)
+  :Cập nhật trạng thái "Đã giao";
+else (No)
+  :Cập nhật trạng thái "Không giao được";
+endif
+:Trả thông tin về hệ thống;
+
+|Hệ thống|
+:Nhận kết quả giao hàng;
+:Cập nhật trạng thái cuối cùng trong CSDL;
+:Gửi thông báo "Hoàn tất" đến khách hàng;
+
+|Khách hàng|
+:Nhận thông báo & đánh giá dịch vụ;
+stop
+@enduml
