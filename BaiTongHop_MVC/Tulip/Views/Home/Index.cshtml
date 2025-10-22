@@ -1,0 +1,22 @@
+@model IEnumerable<Tulip.Models.Product>
+
+@{
+    ViewData["Title"] = "Trang chủ";
+}
+
+
+
+<h2 class="title">🌸 Danh sách sản phẩm nổi bật 🌸</h2>
+
+<div class="product-grid">
+    @foreach (var item in Model)
+    {
+        <div class="product-card">
+            <img src="@item.ImageURL" alt="@item.ProductName" class="product-img" />
+            <h3>@item.ProductName</h3>
+            <p>@item.Category</p>
+            <p class="price">@item.Price.ToString("C")</p>
+            <a asp-controller="Product" asp-action="Details" asp-route-id="@item.ProductID" class="btn">Xem chi tiết</a>
+        </div>
+    }
+</div>

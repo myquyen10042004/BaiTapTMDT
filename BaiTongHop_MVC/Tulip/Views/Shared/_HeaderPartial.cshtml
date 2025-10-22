@@ -1,0 +1,21 @@
+<nav class="navbar">
+    <div class="navbar-left">
+        <div class="logo">🌷 Tulip Shop</div>
+    </div>
+
+    <div class="navbar-center">
+        <ul class="nav-links">
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Sản phẩm</a></li>
+            <li><a href="#">Đăng nhập</a></li>
+            <li><a href="#">Giỏ hàng</a></li>
+        </ul>
+    </div>
+
+    <div class="navbar-right">
+        <form asp-controller="Home" asp-action="Index" method="get" class="search-form">
+            <input type="text" name="search" placeholder="Tìm sản phẩm..." />
+            <button type="submit">🔍</button>
+        </form>
+    </div>
+</nav>

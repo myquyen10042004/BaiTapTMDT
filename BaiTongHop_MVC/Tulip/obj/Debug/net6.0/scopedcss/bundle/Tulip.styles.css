@@ -1,0 +1,187 @@
+/* _content/Tulip/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* 🌸 Toàn bộ trang */
+body[b-7mqbfrlq4u] {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fdfdfd;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+/* 🌿 NAVBAR (trong suốt khi đầu trang, tối khi cuộn) */
+.custom-navbar[b-7mqbfrlq4u] {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease;
+    padding: 0.8rem 1rem;
+    backdrop-filter: blur(4px);
+}
+
+.custom-navbar.navbar-scrolled[b-7mqbfrlq4u] {
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* 🌷 Logo Tulip */
+.navbar-brand[b-7mqbfrlq4u] {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #f0a500 !important;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+.navbar-brand:hover[b-7mqbfrlq4u] {
+    color: #ffffff !important;
+}
+
+/* 🔗 Liên kết menu */
+.navbar-nav .nav-link[b-7mqbfrlq4u] {
+    color: #ffffff !important;
+    font-weight: 500;
+    margin-left: 18px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+.navbar-nav .nav-link:hover[b-7mqbfrlq4u],
+.navbar-nav .nav-link.active[b-7mqbfrlq4u] {
+    color: #f0a500 !important;
+    transform: translateY(-1px);
+}
+
+/* 🔍 Ô tìm kiếm */
+.search-form[b-7mqbfrlq4u] {
+    display: flex;
+    align-items: center;
+}
+.search-box[b-7mqbfrlq4u] {
+    border-radius: 30px;
+    border: 1px solid #666;
+    background-color: #f8f8f8;
+    color: #333;
+    padding: 6px 15px;
+    width: 180px;
+    transition: all 0.3s ease;
+}
+.search-box:focus[b-7mqbfrlq4u] {
+    width: 230px;
+    border-color: #f0a500;
+    box-shadow: 0 0 8px rgba(240, 165, 0, 0.7);
+    outline: none;
+}
+.search-form button[b-7mqbfrlq4u] {
+    border-radius: 50%;
+    background-color: #f0a500;
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+    margin-left: 5px;
+    transition: all 0.3s ease;
+}
+.search-form button:hover[b-7mqbfrlq4u] {
+    background-color: #fff;
+    color: #000;
+}
+
+/* 🛒 Giỏ hàng */
+.btn-cart[b-7mqbfrlq4u] {
+    position: relative;
+    background: transparent;
+    color: #fff;
+    border: none;
+    margin-left: 15px;
+    transition: all 0.3s ease;
+}
+.btn-cart:hover[b-7mqbfrlq4u] {
+    color: #f0a500;
+    transform: scale(1.1);
+}
+.cart-count[b-7mqbfrlq4u] {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: #dc3545;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 2px 6px;
+}
+
+/* 🌸 Giúp banner nằm cách header */
+.banner-container[b-7mqbfrlq4u] {
+    margin-top: 100px; /* ✅ Tạo khoảng cách rõ ràng với thanh menu */
+    margin-bottom: 40px; /* Thêm không gian phía dưới để trang thoáng hơn */
+}
+
+/* ✨ Cải thiện phần khối banner */
+.banner-container .bg-dark[b-7mqbfrlq4u] {
+    background: linear-gradient(145deg, #1b1b1b, #2c2c2c);
+    border-radius: 20px;
+    padding: 60px 40px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.banner-container .bg-dark:hover[b-7mqbfrlq4u] {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.banner-container h1[b-7mqbfrlq4u] {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.banner-container p[b-7mqbfrlq4u] {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.banner-container .btn[b-7mqbfrlq4u] {
+    background-color: #f0a500;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 30px;
+    padding: 10px 25px;
+    transition: all 0.3s ease;
+}
+
+.banner-container .btn:hover[b-7mqbfrlq4u] {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 4px 10px rgba(240, 165, 0, 0.5);
+}
+
+/* 💎 Footer */
+footer[b-7mqbfrlq4u] {
+    background: linear-gradient(90deg, #000, #1a1a1a);
+    color: #ccc;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    padding: 20px 0;
+}
+footer b[b-7mqbfrlq4u] {
+    color: #f0a500;
+    font-weight: 600;
+}
+
+/* ✨ Hiệu ứng fade-in */
+@keyframes fadeIn-b-7mqbfrlq4u {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 📱 Responsive */
+@media (max-width: 992px) {
+    .search-form[b-7mqbfrlq4u] {
+        display: none;
+    }
+    .banner h1[b-7mqbfrlq4u] {
+        font-size: 2.3rem;
+    }
+}
